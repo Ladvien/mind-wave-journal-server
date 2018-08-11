@@ -15,9 +15,9 @@ app.post('/eggsamples', (req, res) => {
     var eegSample = new EEGSample(eegSample)
     
     eegSample.save().then((doc) => {
-        console.log('Save EEG Sample', doc)
+        res.send(doc);
     }, (err) => {
-        console.log('Unable to save EEG Sample.', err)
+        res.send(err);
     });
 }); 
 
