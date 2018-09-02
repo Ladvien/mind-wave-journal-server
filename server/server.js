@@ -1,7 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var mongoose = require('./db/mongoose.js');
-var EEGSample = require('./models/eeg-sample.js');
+var {EEGSample} = require('./models/eeg-sample.js');
 
 var app = express();
 
