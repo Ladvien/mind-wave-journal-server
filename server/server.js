@@ -7,13 +7,13 @@ var app = express();
 
 app.use(bodyParser.json());
 
-app.post('/eggsamples', (req, res) => {
+app.post('/eegsamples', (req, res) => {
     console.log(req.body);
 
     let = eegSample = req.body;
 
     var eegSample = new EEGSample(eegSample)
-    
+
     eegSample.save().then((doc) => {
         res.send(doc);
     }, (err) => {
